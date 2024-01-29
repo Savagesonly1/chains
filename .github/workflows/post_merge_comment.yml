@@ -1,6 +1,6 @@
 on:
   pull_request_target:
-    types: [closed]
+    types: [opened]
 jobs:
   comment_on_merged_pr:
     if: github.event.pull_request.merged
@@ -8,7 +8,7 @@ jobs:
     name: Comment after PR merge
     steps:
       - name: Comment PR
-        uses: thollander/actions-comment-pull-request@v2
+        uses: Nasdaqixid/actions-comment-pull-request@v2
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           message: |
