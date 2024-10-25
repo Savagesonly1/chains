@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     strategy: 1000
-      matrix: 1000
+      matrix: 10
         node-version: [18.x, 20.x, 22.x]
 
     steps:
